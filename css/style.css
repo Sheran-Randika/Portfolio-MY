@@ -1,0 +1,71 @@
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comic+Neue:wght@300;400;700&display=swap');
+
+
+:root{
+
+}
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: aquamarine;
+    font-family: 'Comic Neue', cursive;
+}
+
+::selection{
+    background-color: #75caff;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+nav.container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    margin-right: 1.5rem;
+    height: 120px;
+    line-height: 120px;
+}
+
+.links{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
