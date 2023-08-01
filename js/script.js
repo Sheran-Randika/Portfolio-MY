@@ -17,7 +17,11 @@ stickyNavbar();
 window.addEventListener('scroll',stickyNavbar);
 
 let sr = ScrollReveal({
+<<<<<<< HEAD
    duration: 2500,;
+=======
+   duration: 1700,
+>>>>>>> ac49b0607d899a311cc9f006891c6adfff1a7ba1
    distance: '50px',
 });
 
