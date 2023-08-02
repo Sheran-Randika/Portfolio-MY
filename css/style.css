@@ -357,7 +357,7 @@ header.scrolled .logo{
 
 @keyframes progress{
     to{
-        stroke-dashoffset: 300;
+        stroke-dashoffset: var(--target);
     }
 }
 
