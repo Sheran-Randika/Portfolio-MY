@@ -65,3 +65,15 @@ function skillsCounter(){
 
    progress_bars.forEach((p)=>(p.style.animation="progress 2s ease-in-out forwards"));
 }
+
+// portfolio animation
+
+let mixer = mixitup('.portfolio-gallery',
+{
+   selectors: {
+       target: '.prt-card'
+   },
+   animation: {
+       duration: 500
+   }
+});
