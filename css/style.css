@@ -25,6 +25,17 @@ body{
     font-family: 'Comic Neue', cursive;
 }
 
+body.dark{
+    background-color: #171010;
+    color: #362222;
+    --primary-color: #c0b3a7;
+    --secondary-color: #391c0c;
+    --accent-color: #1a0d07;
+    --light-color: #2a1a16;
+    --dark-color: #fffefe;
+    --normal-font: #f99531;
+}
+
 body.stopScrolling{
     overflow: hidden;
     height: 100%;
@@ -135,11 +146,11 @@ header.scrolled .logo{
     transition: 0.3s;
 }
 
-.nav-link:hover{
+.nav-link:hover, .nav-link.active{
     opacity: 1;
 }
 
-.nav-link:hover::after{
+.nav-link:hover::after, .nav-link.active::after{
     height: 100%;
     width: calc(100% + 10px);
     opacity: 0.2;
@@ -688,4 +699,33 @@ textarea.form-input{
 
 .contact-form .form-input{
     margin-bottom: 1.5rem;
+}
+
+/* footer */
+
+footer{
+    padding: 3rem 0;
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .social-media{
+    display: flex;
+}
+
+.social-link{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
 }
