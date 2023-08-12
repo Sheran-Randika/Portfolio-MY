@@ -517,4 +517,54 @@ header.scrolled .logo{
     transition: 0.3s var(--i);
 }
 
-/
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 11; 
+    pointer-events: none;
+}
+
+.modal-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.83);
+    opacity: 0;
+}
+
+.slider-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 400px));
+    width: 90%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.slider-wrap img{
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+}
+
+.navigation{
+    color: white;
+    font-size: 2.1rem;
+    cursor: pointer;
+    padding: 2rem;
+}
+
+.slider-wrap img.showImage{
+    display: block;
+}
