@@ -25,6 +25,11 @@ body{
     font-family: 'Comic Neue', cursive;
 }
 
+body.stopScrolling{
+    overflow: hidden;
+    height: 100%;
+}
+
 ::selection{
     background-color: var(--secondary-color);
     color: var(--light-color);
@@ -203,6 +208,12 @@ header.scrolled .logo{
     color: var(--light-color);
     letter-spacing: 0.4px;
     transition: 0.3s;
+    text-align: center;
+    min-width: 125px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
 }
 
 .btn:hover{
@@ -385,6 +396,10 @@ header.scrolled .logo{
 
 /* Portfolio section */
 
+.portfolio .container{
+    transition: 0.4s;
+}
+
 .portfolio-header {
     display: flex;
     align-items: flex-end;
@@ -536,6 +551,7 @@ header.scrolled .logo{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.83);
     opacity: 0;
+    transition: 0.3s;
 }
 
 .slider-wrap{
@@ -550,6 +566,7 @@ header.scrolled .logo{
     align-items: center;
     justify-content: center;
     opacity: 0;
+    transition: 0.2s;
 }
 
 .slider-wrap img{
@@ -567,4 +584,108 @@ header.scrolled .logo{
 
 .slider-wrap img.showImage{
     display: block;
+}
+
+.portfolio.open .modal{
+    pointer-events: auto;
+}
+
+.portfolio.open .modal-overlay{
+    opacity: 1;
+}
+
+.portfolio.open .container{
+    transform: scale(0.9);
+}
+
+.portfolio.open .slider-wrap{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: 0.45s 0.1s;
+}
+
+/* Contact section */
+
+.contact .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.8rem;
+}
+
+.mail{
+    color: #FFA559;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.mail  i{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 2px;
+    transform: translateY(3px);
+    transition: 0.3s margin-left;
+}
+
+.mail:hover{
+    color: var(--primary-color);
+}
+
+.mail:hover i{
+    margin-left: 10px;
+}
+
+.contact-form{
+    background-color: var(--secondary-color);
+    padding: 3.5rem 3rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h3{
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    line-height: 0.9;
+}
+
+.form-input{
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    background: var(--light-color);
+    border: 2px solid var(--dark-color);
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-input::placeholder{
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.form-input:hover{
+    filter: brightness(94%);
+}
+
+.form-input:valid, .form-input:focus{
+    filter: brightness(100%);
+    background: var(--light-color);
+    border-color: var(--normal-font);
+}
+
+textarea.form-input{
+    resize: none;
+    min-height: 170px;
+}
+
+.contact-form .form-input{
+    margin-bottom: 1.5rem;
 }
