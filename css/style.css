@@ -466,6 +466,30 @@ header.scrolled .logo{
     font-weight: 400;
 }
 
+@media (max-width: 768px) {
+    .skills-box {
+        padding: 4rem 5rem;
+    }
+
+    .skills-wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Responsive styling for mobile phones */
+@media (max-width: 480px) {
+    .skills-box {
+        padding: 3rem 4rem;
+    }
+
+    .skills-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 /* Portfolio section */
 
@@ -841,18 +865,128 @@ footer .social-media{
     width: 80%;
   }
   .about-stats .progress-bars .progress-bar .progress-con .progress .css {
-    width: 95%;
+    width: 85%;
   }
   .about-stats .progress-bars .progress-bar .progress-con .progress .js {
-    width: 75%;
+    width: 70%;
   }
   .about-stats .progress-bars .progress-bar .progress-con .progress .react {
-    width: 60%;
+    width: 75%;
   }
   .about-stats .progress-bars .progress-bar .progress-con .progress .node {
-    width: 87%;
+    width: 77%;
   }
   .about-stats .progress-bars .progress-bar .progress-con .progress .python {
     width: 70%;
   }
-  
+
+
+/* popup menu */
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    width: 400px;
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: none;
+}
+
+.popup-box.active {
+    opacity: 1;
+    display: block;
+}
+
+.popup-header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.popup-header h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.popup-close-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup-content {
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.prt-card:hover .overlay {
+    opacity: 1;
+}
+
+.read-more-link:hover ~ .overlay {
+    opacity: 1;
+}
+
+body.popup-open {
+    overflow: hidden;
+}
+
+.quick-up-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.quick-up-button:hover {
+    background-color: #555;
+}

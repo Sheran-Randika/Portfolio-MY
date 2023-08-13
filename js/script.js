@@ -199,5 +199,40 @@ function toggleEducation() {
    }
  }
  
- 
- 
+
+ document.addEventListener("DOMContentLoaded", function () {
+   const readMoreButtons = document.querySelectorAll(".read-more-button");
+   const popupOverlays = document.querySelectorAll(".popup-overlay");
+   const popupBoxes = document.querySelectorAll(".popup-box");
+   const popupCloseButtons = document.querySelectorAll(".popup-close-button");
+
+   readMoreButtons.forEach(function (button, index) {
+       button.addEventListener("click", function (event) {
+           event.preventDefault();
+           popupOverlays[index].style.display = "block";
+           popupBoxes[index].classList.add("active");
+           document.body.classList.add("popup-open");
+       });
+   });
+
+   popupCloseButtons.forEach(function (button, index) {
+       button.addEventListener("click", function () {
+           popupOverlays[index].style.display = "none";
+           popupBoxes[index].classList.remove("active");
+           document.body.classList.remove("popup-open");
+       });
+   });
+});
+
+
+window.addEventListener("scroll", function() {
+   if (window.scrollY > 300) {
+       document.querySelector(".quick-up-button").style.display = "block";
+   } else {
+       document.querySelector(".quick-up-button").style.display = "none";
+   }
+});
+
+document.querySelector(".quick-up-button").addEventListener("click", function() {
+   window.scrollTo({ top: 0, behavior: "smooth" });
+});
