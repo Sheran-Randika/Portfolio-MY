@@ -168,3 +168,35 @@ function changeTheme(isDark){
 toggle_btn.addEventListener('click',()=>{
    changeTheme(!document.body.classList.contains('dark'));
 } ); 
+
+// toggle menu
+
+
+function toggleEducation() {
+   var educationDiv = document.getElementById("myDiv1");
+   var expandIcons = document.querySelectorAll(".uil-angle-down");
+ 
+   if (educationDiv.style.display === "none") {
+     educationDiv.style.display = "block";
+     expandIcons.forEach(icon => icon.classList.add("expanded"));
+   } else {
+     educationDiv.style.display = "none";
+     expandIcons.forEach(icon => icon.classList.remove("expanded"));
+   }
+ }
+ 
+ function toggleVolanteering() {
+   var volunteeringDiv = document.getElementById("myDiv2");
+   var expandIcons = document.querySelectorAll(".expand");
+ 
+   if (volunteeringDiv.style.display === "none") {
+     volunteeringDiv.style.display = "block";
+     expandIcons.forEach(icon => icon.classList.add("expanded"));
+   } else {
+     volunteeringDiv.style.display = "none";
+     expandIcons.forEach(icon => icon.classList.remove("expanded"));
+   }
+ }
+ 
+ 
+ 
