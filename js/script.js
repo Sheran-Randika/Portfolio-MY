@@ -172,6 +172,7 @@ toggle_btn.addEventListener('click',()=>{
 // toggle menu
 
 
+
 function toggleEducation() {
    var educationDiv = document.getElementById("myDiv1");
    var expandIcons = document.querySelectorAll(".uil-angle-down");
