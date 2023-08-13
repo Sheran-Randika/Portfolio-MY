@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -35,10 +36,12 @@
                     <h1 class="heading">Sheran Randika</h1>
                     <p class="mine">
                         I'm a Web Developer, I love to create beautiful and functional websites.
-                    </p>
+                    </p><br>
+                    <a href="https://www.linkedin.com/in/sheran-randika-97882b193" class="social-linkm"><i class="uil uil-linkedin"></i></a>
+                    <a href="https://github.com/Sheran-Randika" class="social-linkm"><i class="uil uil-github"></i></a>
                     <div class="cta">
                         <a href="mailto:sheranrandika1999@gmail.com" class="btn">Hire Me</a>
-                        <a href="./assets/CV.pdf" download class="btn secondary-btn">Download CV</a>
+                        <a href="./assets/CV.pdf" class="download-button" download><span>Download CV</span></a>
                     </div>
                 </div>
                 <div class="showcase-image">
@@ -437,14 +440,16 @@
                         </li>
                     </ul>
                 </div>
-                <form action="index.html" class="contact-form">
+                <form class="contact-form" name="submit-to-google-sheet">
                     <h3>Send Message</h3>
-                    <input type="text" placeholder="Name" class="form-input" required>
-                    <input type="email" placeholder="Email" class="form-input" required>
-                    <textarea name="message" id="message" cols="0" rows="10" placeholder="Message"
+                    <input type="text" placeholder="Name" name="Name" class="form-input" required>
+                    <input type="email" placeholder="Email" name="Email" class="form-input" required>
+                    <textarea name="Message" id="message" cols="0" rows="10" placeholder="Message"
                         class="form-input" required></textarea>
-                    <input type="submit" value="Send Message" class="btn">
+                    <button type="submit" value="Send Message" class="btn">Submit</button><br>
+                    <span id="msg"></span>
                 </form>
+                
             </div>
         </section>
     </main>
