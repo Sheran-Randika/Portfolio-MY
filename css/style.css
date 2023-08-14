@@ -10,6 +10,10 @@
     --normal-font: #FFA559;
     --section-padding: 4rem;
   }
+
+  html {
+  scroll-behavior: smooth;
+  }
   
 *,
 *::before,
