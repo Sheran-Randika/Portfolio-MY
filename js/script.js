@@ -282,3 +282,4 @@ links.forEach(link=>link.addEventListener('click',()=>{
       document.body.classList.remove('open');
       document.body.classList.remove('stopScrolling');
    }));
+
