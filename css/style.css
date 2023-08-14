@@ -1249,10 +1249,15 @@ body.popup-open {
         grid-template-columns: 1fr;
         justify-items: flex-start;
     }
+    
     .skills-wrap{
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 2rem;
+        grid-template-columns: repeat(2, 150px);
+        row-gap: 1rem;
     }
+    .sk-title{
+        margin-top: 0;
+    }
+
     .contact .container{
         grid-template-columns: 1fr;
         row-gap: 3rem;
@@ -1266,4 +1271,23 @@ body.popup-open {
         justify-content: center;
     }
     
+  }
+
+  @media(max-width:500px){
+    .container{
+        padding: 0 1rem;
+    }
+    .showcase-area .container{
+        row-gap: 4.3rem;
+    }
+    .showcase-area .heading{
+        font-size: 2rem;
+    }
+    .skills-wrap{
+        grid-template-columns: 1fr;
+        row-gap: 0.2rem; 
+    }
+    .skills-box{
+        padding: 3rem 2.5rem;
+    }
   }
