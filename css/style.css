@@ -1184,7 +1184,12 @@ body.popup-open {
     }
     body.open header {
         max-height: 505px ;
-        background-color: rosybrown;
+        background-color: rgb(241, 238, 233);
+    }
+
+    body.dark body.open header {
+        max-height: 505px ;
+        background-color: rgb(33, 29, 22);
     }
     body.open .overlay{
         opacity: 1;
@@ -1223,6 +1228,30 @@ body.popup-open {
     }
     .cta{
         margin-top: 1rem;
+    }
+    .about .container{
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+    .box-desc{
+        grid-template-columns: 1fr;
+        justify-items: flex-start;
+    }
+    .skills-wrap{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+    }
+    .contact .container{
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+    footer{
+        padding: var(--section-padding ) 0 1rem;
+    }
+    footer .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     
   }
