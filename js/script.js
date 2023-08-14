@@ -15,6 +15,8 @@ const links=document.querySelectorAll('.nav-link');
 
 const toggle_btn=document.querySelector('.toggle-btn');
 
+const hamburger = document.querySelector('.hamburger');
+
 window.addEventListener('scroll',()=>{
    activeLink();
    if (!skillsPlayed) skillsCounter();
@@ -94,14 +96,14 @@ let currentIndex =0;
 
 zoom_icons.forEach((icn, i)=>
    icn.addEventListener('click',()=>{
-      prt_section.classList.add('open')
+      prt_section.classList.add('open');
       document.body.classList.add('stopScrolling');
       currentIndex = i;
       changeImage(currentIndex);
    }));
 
 modal_overlay.addEventListener('click',()=>{
-   prt_section.classList.remove('open')
+   prt_section.classList.remove('open');
    document.body.classList.remove('stopScrolling');
 });
 
@@ -124,7 +126,7 @@ next_btn.addEventListener('click',()=>{
 });
 
 function changeImage(index){
-   images.forEach((img)=>img.classList.remove('showImage'));
+   images.forEach(img=>img.classList.remove('showImage'));
    images[index].classList.add('showImage');
 }
 
@@ -268,3 +270,15 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbw_KWn0Gtx07dGfQHxzqV
                 msg.textContent = "An error occurred. Please try again later.";
             });
         });
+
+// hamburgur
+
+hamburger.addEventListener('click',()=>{
+   document.body.classList.toggle('open');
+   document.body.classList.toggle('stopScrolling');
+});
+
+links.forEach(link=>link.addEventListener('click',()=>{
+      document.body.classList.remove('open');
+      document.body.classList.remove('stopScrolling');
+   }));
