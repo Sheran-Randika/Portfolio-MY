@@ -838,6 +838,18 @@ textarea.form-input{
     margin-bottom: 1.5rem;
 }
 
+address {
+    font-style: italic;
+    padding: 5px 5px 5px 30px;
+    width: 40%;
+    margin-top: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+address p {
+    margin: 5px 0;
+}
+
 /* footer */
 
 footer{
