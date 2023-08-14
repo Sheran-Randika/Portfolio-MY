@@ -56,6 +56,10 @@ body.dark .about-stats .progress-bars .progress-bar .progress-con .progress{
     background-color: #572704;
 }
 
+body.dark .social-linkm{
+    color: #F2EAD3;
+}
+
 body.stopScrolling{
     overflow: hidden;
     height: 100%;
