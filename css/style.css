@@ -1334,4 +1334,8 @@ body.popup-open {
     .skills-box{
         padding: 3rem 2.5rem;
     }
+    .copy{
+        text-align: center;
+    }
   }
+
