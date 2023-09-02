@@ -352,3 +352,22 @@ document.addEventListener("DOMContentLoaded", function () {
    images[index].classList.add('showImage');
 }
 });
+
+
+//send Email
+
+function sendEmail() {
+   Email.send({
+      SecureToken :"11ac623f-087b-440b-9bf3-80a932cae2f6" ,
+      To: 'sheranrandika1999@gmail.com',
+      From: 'sheranrandika90@gmail.com',
+      Subject: "My -Porfolio Massage",
+      Body: "Name:" + document.getElementById("name").value 
+      + "<br/>Email:" + document.getElementById("email").value 
+      + "<br/>Phone no:" + document.getElementById("phone").value 
+      + "<br/>Message:" + document.getElementById("message").value,
+   }).then(
+      message => alert(message)
+   );
+}
+//
