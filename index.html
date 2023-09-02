@@ -548,13 +548,14 @@
                         </li>
                     </ul>
                 </div>
-                <form class="contact-form" name="submit-to-google-sheet">
+                <form onsubmit="sendEmail(); reset(); return false;" class="contact-form">
                     <h3>Send Message</h3>
-                    <input type="text" placeholder="Name" name="Name" class="form-input" required>
-                    <input type="email" placeholder="Email" name="Email" class="form-input" required>
-                    <textarea name="message" id="message" cols="0" rows="10" placeholder="Message"
+                    <input type="text" placeholder="Name" id="name" class="form-input" required>
+                    <input type="email" placeholder="Email" id="email" class="form-input" required>
+                    <input type="text" placeholder="Phone no:" id="phone" class="form-input" required>
+                    <textarea name="message" id="message" cols="0" rows="10" placeholder="How can I help you?"
                         class="form-input" required></textarea>
-                    <button type="submit" value="Send Message" class="btn">submit</button><br>
+                    <button type="submit" value="Send Message" class="btn">Send</button><br>
                     <span id="msg"></span>
                 </form>
                 
@@ -579,7 +580,7 @@
         <a href="#" class="quick-up-button"><i class="uil uil-arrow-up"></i></a>
 
     </footer>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./js/mixitup.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
